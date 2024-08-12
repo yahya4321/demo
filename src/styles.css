@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-secondary font-primary text-[17px] leading-8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply text-primary leading-[120%];
+}
+
+.h1 {
+    @apply text-[36px] xl:text-[64px] font-semibold;
+}
+
+.h2 {
+    @apply text-[30px] xl:text-[44px] font-semibold capitalize tracking-[0.44px];
+}
+
+.h3 {
+    @apply text-[20px] xl:text-[26px] font-semibold;
+}
+
+.h4 {
+    @apply text-[20px] xl:text-[26px] font-semibold capitalize;
+}
+
+.btn {
+    @apply rounded-full uppercase tracking-[1.02px] flex items-center justify-center transition-all;
+}
+
+.btn-sm {
+    @apply h-20 px-10;
+}
+
+.btn-lg {
+    @apply h-16 px-[50px];
+}
+
+.btn-accent {
+    @apply bg-accent text-white hover:bg-accent-secondary;
+}
+
+.btn-white {
+    @apply bg-white text-secondary hover:bg-white/0;
+}
+
+@keyframes appear {
+
+  from {
+    opacity: 0;
+transform: translateX(700px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.appointment,  .faq, .blog, .newsletter, .team, .testimonial, .spriteAnim, .gifs, .blogs, .Customer_reviews {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%
+
+}
+
+
+@keyframes colorWave {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  
+  
+  .btn-outline {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid var(--accent-color); /* Define accent color */
+    color: var(--secondary-color); /* Define secondary color */
+    transition: transform 0.4s ease-in-out, color 0.7s ease-in-out;
+    
+  }
+  
+  .btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #06c8dd; /* Green color */
+    transition: width 0.3s ease-in-out;
+    z-index: -1; /* Place the pseudo-element behind the text */
+  }
+  
+  .btn-outline:hover::before {
+    width: 100%;
+    animation: colorWave 0.7s ease-in-out forwards;
+  }
+  
+  .btn-outline:hover {
+    border-color: transparent;
+    color: white; /* Change text color to white on hover */
+    transform: scale(0.95); /* Scale transformation */
+  }
+  
+  .btn-outline span {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the pseudo-element */
+    transition: color 0.3s ease-in-out;
+    mix-blend-mode: normal; /* Reset blend mode to normal */
+    padding: 0.2em; /* Add some padding to create a background area */
+  }
+  
+
+
+
+
+
+
+
+
+  
+  .btn-outline1 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: transparent;
+    border: 2px solid var(--accent-color); /* Define accent color */
+    color: var(--secondary-color); /* Define secondary color */
+    transition: transform 0.4s ease-in-out, color 0.7s ease-in-out;
+    
+  }
+  
+  .btn-outline1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #c4074f; /* Green color */
+    transition: width 0.3s ease-in-out;
+    z-index: -1; /* Place the pseudo-element behind the text */
+  }
+  
+  .btn-outline1:hover::before {
+    width: 100%;
+    animation: colorWave 0.7s ease-in-out forwards;
+  }
+  
+  .btn-outline1:hover {
+    border-color: transparent;
+    color: white; /* Change text color to white on hover */
+    transform: scale(0.95); /* Scale transformation */
+  }
+  
+  .btn-outline1 span {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the pseudo-element */
+    transition: color 0.3s ease-in-out;
+    mix-blend-mode: normal; /* Reset blend mode to normal */
+    padding: 0.2em; /* Add some padding to create a background area */
+  }
+
+
+
+
+
+
+
+
+  .blog__post {
+    width: 380px; /* Set your desired width */
+    height: 500px; /* Set your desired height */
+  }
+  
+  
+.input, .select {
+    @apply w-full rounded-[10px] h-[66px] outline-none border border-[#dbdfdf] text-secondary font-light placeholder:font-light placeholder:text-secondary;
+}
+
+.input {
+    @apply py-12 xl:py-[150px];
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    @apply bg-accent;
+}
+
+.faq__item.open .faq__answer {
+    @apply h-full;
+}
+
+
+.nav-item {
+  position: relative;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  transform: translateY(-5px); /* Adjust as needed */
+  opacity: 1; /* Adjust as needed */
+  font-weight: bold; /* Makes the text bold */
+  font-size: 1.2em; /* Increases the text size, adjust as needed */
+}
+
+
+/* Ensure smooth transition of the text color */
+.nav-item a {
+  transition: color 0.3s ease-in-out;
+}
+.public-btn1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #00d1d1;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #00d1d1;
+  overflow: hidden;
+  z-index: 1
+}
+
+@media (max-width: 1580px) {
+  .public-btn1 {
+    height: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .public-btn1 {
+    padding: 0 0.4rem;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.public-btn1 span {
+  position: relative;
+  z-index: 2; /* Ensure text is above the white background */
+  transition: color 0.3s;
+}
+
+.public-btn1 img,
+.public-btn1 svg {
+  position: relative;
+  z-index: 2; /* Ensure icons are above the white background */
+  margin-left: 0.1rem;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 767px) {
+  .public-btn1 img,
+  .public-btn1 svg {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+}
+
+.public-btn1 img path,
+.public-btn1 svg path {
+  fill: #fff;
+  transition: all 0.3s;
+}
+
+.public-btn1:hover img,
+.public-btn1:hover svg {
+  transform: translateX(0.1rem);
+}
+
+.public-btn1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure background is behind text and icons */
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media (max-width: 767px) {
+  .public-btn1::after {
+    border-radius: 0.4rem;
+  }
+}
+
+.public-btn1:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.public-btn1:hover {
+  color: #d11f00; /* Text color on hover */
+}
+
+.public-btn1:hover span {
+  color: #d15e00 !important; /* Ensure text color changes to green on hover */
+}
+
+.public-btn1:hover svg path {
+  fill: #d16500; /* Ensure icon color changes to green on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animateSprite {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -5180px; } /* Adjust this value based on the height of your sprite sheet */
+}
+
+.sprite-animation {
+  width: 400px;
+  height: 330px;
+  position: absolute;
+  transform: translateY(-50%);
+  left: -5%; /* Adjust as needed */
+  top: 50%;
+  background: url('assets/img/hero/img3.png');
+  background-repeat: no-repeat;
+  border: none; /* Remove any border */
+  animation: animateSprite 3s steps(17) infinite; /* Start animation on hover */
+}
+
+
+
+
+
+@keyframes animateSprite2 {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -8060px; } /* Adjust this value based on the height of your sprite sheet */
+}
+
+.sprite-animation2 {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  transform: translateY(-50%);
+  background: url('assets/img/hero/img5.png');
+  right: 0%; /* Adjust as needed */
+  background-repeat: no-repeat;
+  border: none; /* Remove any border */
+  animation: animateSprite2 3s steps(32) infinite; /* Start animation on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animateSprite1 {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -10200px; } /* Adjust this value based on the height of your sprite sheet */
+}
+
+.sprite-animation1 {
+  width: 900px;
+  height: 450px;
+  position: absolute;
+  right: 10px;/* Adjust as needed */
+  transform: translateY(-50%);
+  background: url('assets/img/hero/img4.png');
+  background-repeat: no-repeat;
+  border: white; /* Remove any border */
+  animation: animateSprite1 3s steps(17) infinite; /* Start animation immediately */
+}
+
+
