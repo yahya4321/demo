@@ -331,12 +331,7 @@ transform: translateX(700px);
 
 
 
-
-
-
-
-
-
+/* Animation keyframes for sprite 1 */
 @keyframes animateSprite {
   0% { background-position: 0 0; }
   100% { background-position: 0 -5180px; } /* Adjust this value based on the height of your sprite sheet */
@@ -352,13 +347,14 @@ transform: translateX(700px);
   background: url('assets/img/hero/img3.png');
   background-repeat: no-repeat;
   border: none; /* Remove any border */
-  animation: animateSprite 3s steps(17) infinite; /* Start animation on hover */
 }
 
+/* Start animation on hover */
+.sprite-animation:hover {
+  animation: animateSprite 3s steps(17) infinite;
+}
 
-
-
-
+/* Animation keyframes for sprite 2 */
 @keyframes animateSprite2 {
   0% { background-position: 0 0; }
   100% { background-position: 0 -8060px; } /* Adjust this value based on the height of your sprite sheet */
@@ -373,21 +369,14 @@ transform: translateX(700px);
   right: 0%; /* Adjust as needed */
   background-repeat: no-repeat;
   border: none; /* Remove any border */
-  animation: animateSprite2 3s steps(32) infinite; /* Start animation on hover */
 }
 
+/* Start animation on hover */
+.sprite-animation2:hover {
+  animation: animateSprite2 3s steps(32) infinite;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* Animation keyframes for sprite 3 */
 @keyframes animateSprite1 {
   0% { background-position: 0 0; }
   100% { background-position: 0 -10200px; } /* Adjust this value based on the height of your sprite sheet */
@@ -402,7 +391,11 @@ transform: translateX(700px);
   background: url('assets/img/hero/img4.png');
   background-repeat: no-repeat;
   border: white; /* Remove any border */
-  animation: animateSprite1 3s steps(17) infinite; /* Start animation immediately */
+}
+
+/* Start animation on hover */
+.sprite-animation1:hover {
+  animation: animateSprite1 3s steps(17) infinite;
 }
 
 
